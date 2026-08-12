@@ -1,9 +1,4 @@
-import sys
-import os
-# Add the 'app' directory to Python's module search path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-from tools import (
+from app.tools import (
     trend_idea_generator,
     caption_writer,
     hashtag_generator,
@@ -11,7 +6,7 @@ from tools import (
     content_reviewer,
     file_saver_tool
 )
-from memory import save_to_memory
+from app.memory import save_to_memory
 
 
 class TrendPilotAgent:
