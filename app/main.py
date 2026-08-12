@@ -8,10 +8,7 @@ import streamlit as st
 import time
 from agent import TrendPilotAgent  # Direct import
 
-st.set_page_config(page_title="TrendPilot AI", page_icon="🚀", layout="wide")
-
-st.title("🚀 TrendPilot AI Content Studio")
-# --- 1. PAGE SETUP ---
+# --- 1. PAGE SETUP (Must be the FIRST Streamlit command) ---
 st.set_page_config(
     page_title="TrendPilot AI | Campaign Studio Pro",
     page_icon="🔮",
