@@ -1,12 +1,9 @@
 import sys
 import os
-
-# Dynamically add current directory (app/) to Python path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
 import streamlit as st
 import time
-from agent import TrendPilotAgent  # Direct import
+
+from .agent import TrendPilotAgent
 
 # --- 1. PAGE SETUP (Must be the FIRST Streamlit command) ---
 st.set_page_config(
