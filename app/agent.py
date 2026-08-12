@@ -1,7 +1,10 @@
 import sys
 import os
 
-from .tools import (
+# Guarantee Python can find files inside the app/ directory
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from tools import (
     trend_idea_generator,
     caption_writer,
     hashtag_generator,
@@ -9,7 +12,7 @@ from .tools import (
     content_reviewer,
     file_saver_tool
 )
-from .memory import save_to_memory
+from memory import save_to_memory
 
 
 class TrendPilotAgent:
