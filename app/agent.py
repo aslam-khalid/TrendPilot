@@ -1,10 +1,10 @@
 import sys
 import os
 
-# Add project root directory to sys.path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Dynamically add current directory (app/) to Python path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from app.tools import (
+from tools import (
     trend_idea_generator,
     caption_writer,
     hashtag_generator,
@@ -12,7 +12,7 @@ from app.tools import (
     content_reviewer,
     file_saver_tool
 )
-from app.memory import save_to_memory
+from memory import save_to_memory
 
 
 class TrendPilotAgent:
