@@ -1,13 +1,16 @@
 import sys
 import os
 
-# Add project root directory to sys.path so imports work seamlessly on Streamlit Cloud
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Dynamically add current directory (app/) to Python path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import streamlit as st
 import time
-from app.agent import TrendPilotAgent
+from agent import TrendPilotAgent  # Direct import
 
+st.set_page_config(page_title="TrendPilot AI", page_icon="🚀", layout="wide")
+
+st.title("🚀 TrendPilot AI Content Studio")
 # --- 1. PAGE SETUP ---
 st.set_page_config(
     page_title="TrendPilot AI | Campaign Studio Pro",
