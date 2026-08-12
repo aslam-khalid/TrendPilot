@@ -1,7 +1,11 @@
+import sys
+import os
+
+# Add project root directory to sys.path so imports work seamlessly on Streamlit Cloud
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import streamlit as st
 import time
-
-# Explicit package import from the 'app' module directory
 from app.agent import TrendPilotAgent
 
 # --- 1. PAGE SETUP ---
