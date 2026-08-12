@@ -1,3 +1,8 @@
+import sys
+import os
+# Add the 'app' directory to Python's module search path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from tools import (
     trend_idea_generator,
     caption_writer,
