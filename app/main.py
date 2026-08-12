@@ -1,9 +1,12 @@
 import sys
 import os
+
+# Guarantee Python can find files inside the app/ directory
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import streamlit as st
 import time
-
-from .agent import TrendPilotAgent
+from agent import TrendPilotAgent
 
 # --- 1. PAGE SETUP (Must be the FIRST Streamlit command) ---
 st.set_page_config(
