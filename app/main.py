@@ -1,8 +1,10 @@
 import sys
 import os
 
-# Guarantee Python can find files inside the app/ directory
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# Guarantee current directory is in Python path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
 
 import streamlit as st
 import time
