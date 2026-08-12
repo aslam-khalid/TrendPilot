@@ -299,7 +299,7 @@ for msg in st.session_state.chat_history:
             <div class="agent-card">
                 <div class="agent-meta-header">
                     <div style="font-size:0.88rem; font-weight:600; color:#a855f7;">🔮 TrendPilot Content Blueprint</div>
-                    <div style="font-size:0.75rem; color:#34d399; font-family:'JetBrains Mono';">✓ Output Saved: {res.get('saved_file')}</div>
+                    <div style="font-size:0.75rem; color:#34d399; font-family:'JetBrains Mono';">✓ Generated Successfully</div>
                 </div>
         """, unsafe_allow_html=True)
 
@@ -324,6 +324,36 @@ for msg in st.session_state.chat_history:
 
         with t4:
             st.markdown(res.get('review'))
+
+        # DIRECT FILE EXPORT DOWNLOAD BUTTON
+        st.markdown("---")
+        export_md = f"""# TrendPilot Content Plan: {res.get('topic')}
+
+**Platform:** {res.get('platform')} | **Tone:** {res.get('tone')}
+
+## 💡 Content Angles
+{res.get('angles')}
+
+## ✍️ Caption
+{res.get('caption')}
+
+## #️⃣ Hashtags
+{res.get('hashtags')}
+
+## 🎬 Reel Script
+{res.get('script')}
+
+## 🔍 Reviewer Feedback
+{res.get('review')}
+"""
+        safe_topic = "".join(c for c in res.get('topic', 'campaign') if c.isalnum() or c in (' ', '_', '-')).strip().replace(" ", "_").lower()
+        st.download_button(
+            label="📥 Export Campaign Plan (.md)",
+            data=export_md,
+            file_name=f"{safe_topic}_plan.md",
+            mime="text/markdown",
+            use_container_width=True
+        )
 
         st.markdown("</div>", unsafe_allow_html=True)
 
