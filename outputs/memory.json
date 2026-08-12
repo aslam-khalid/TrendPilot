@@ -1,0 +1,42 @@
+[
+    {
+        "topic": "YOLOv8 Helmet Detection System",
+        "platform": "Instagram Reels",
+        "file": "outputs/saved_results/yolov8_helmet_detection_system.md"
+    },
+    {
+        "topic": "Autonomous Drone Delivery System",
+        "platform": "YouTube Shorts",
+        "file": "outputs/saved_results/autonomous_drone_delivery_system.md"
+    },
+    {
+        "topic": "AI Code Review Assistant for VS Code",
+        "platform": "X / Twitter",
+        "file": "outputs/saved_results/ai_code_review_assistant_for_vs_code.md"
+    },
+    {
+        "topic": "E-Commerce Customer Support Chatbot",
+        "platform": "Instagram Reels",
+        "file": "outputs/saved_results/ecommerce_customer_support_chatbot.md"
+    },
+    {
+        "topic": "Smart Plant Watering System using IoT",
+        "platform": "LinkedIn",
+        "file": "outputs/saved_results/smart_plant_watering_system_using_iot.md"
+    },
+    {
+        "topic": "Smart Plant Watering System using IoT",
+        "platform": "X / Twitter",
+        "file": "outputs/saved_results/smart_plant_watering_system_using_iot.md"
+    },
+    {
+        "topic": "E-Commerce Customer Support Chatbot",
+        "platform": "Instagram Reels",
+        "file": "/Users/mac/Desktop/Trendpilot/outputs/saved_results/e_commerce_customer_support_chatbot.md"
+    },
+    {
+        "topic": "Smart Plant Watering System using IoT",
+        "platform": "LinkedIn",
+        "file": "/Users/mac/Desktop/Trendpilot/outputs/saved_results/smart_plant_watering_system_using_iot.md"
+    }
+]
