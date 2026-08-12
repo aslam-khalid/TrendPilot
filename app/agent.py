@@ -1,10 +1,7 @@
 import sys
 import os
 
-# Dynamically add current directory (app/) to Python path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-from tools import (
+from .tools import (
     trend_idea_generator,
     caption_writer,
     hashtag_generator,
@@ -12,7 +9,7 @@ from tools import (
     content_reviewer,
     file_saver_tool
 )
-from memory import save_to_memory
+from .memory import save_to_memory
 
 
 class TrendPilotAgent:
@@ -50,7 +47,6 @@ class TrendPilotAgent:
         }
 
         self.log("[Tool Called]: File Saver Tool")
-        # Sanitize filename and fallback if empty
         safe_filename = "".join(c for c in topic if c.isalnum() or c in (' ', '_', '-')).strip().replace(" ", "_").lower()
         if not safe_filename:
             safe_filename = "campaign_output"
